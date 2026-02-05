@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // 你可以换成 heroicons 或 svg
 
-const navItems = ['Abstract', 'Motivation', 'Methodology', 'Experiment'];
+const navItems = ['Abstract', 'Motivation']; //, 'Methodology', 'Experiment'];
 
 export default function Header({ currentSection = 'abstract' }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export default function Header({ currentSection = 'abstract' }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Left: Logo / Title */}
         <div className="text-base sm:text-xl font-semibold text-gray-800 whitespace-nowrap">
-          SAFETY ALIGNMENT
+          BACKDOOR SIGNATURE 
         </div>
 
         {/* Right: Desktop nav */}

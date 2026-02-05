@@ -39,8 +39,8 @@ function App() {
       <Hero />
       <section id="abstract" className="scroll-mt-20"><Abstract /></section>
       <section id="motivation" className="scroll-mt-20"><MotivationAndBackground /></section>
-      <section id="methodology" className="scroll-mt-20"><Methodology /></section>
-      <section id="experiment" className="scroll-mt-20"><Experiment /></section>
+      {/* <section id="methodology" className="scroll-mt-20"><Methodology /></section>
+      <section id="experiment" className="scroll-mt-20"><Experiment /></section> */}
       <Footer />
     </div>
   );

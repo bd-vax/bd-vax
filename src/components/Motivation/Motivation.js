@@ -12,7 +12,7 @@ export default function MotivationAndBackground() {
         <div>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">Motivation</h3>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-            Although existing alignment methods like SFT, DPO, and RLHF are widely used to ensure the safety of large language models (LLMs), recent research reveals that these approaches are often superficial. Aligned models may appear safe initially but still respond to adversarial prompts, subtle fine-tuning adjustments, or decoding manipulation with harmful content. These methods often fail to maintain safety across the entire generation process, especially in complex scenarios where harmful content appears in the middle or end of a response.
+            To build a practical, trigger-agnostic, and reference-free purification method, the paper first analyzes how backdoors manifest in instruction-tuned LLMs and finds that malicious trigger–behavior associations are redundantly encoded across MLP layers rather than localized in attention. This suggests shifting focus from identifying triggers to breaking the trigger–behavior association itself. Motivated by immunization principles, the work aims to extract a shared “backdoor signature” from multiple synthetic variants of the suspicious model and selectively remove it—thereby neutralizing diverse backdoors while preserving the model’s generative capability under standard fine-tuning settings.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export default function MotivationAndBackground() {
         <div>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">Background</h3>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-            Prior studies have suggested that safety alignment can be interpreted as an implicit binary classification task. However, safety-related signals are frequently diluted by other objectives like human preferences for style and tone, leading to model confusion under adversarial pressure. Inspired by BERT, our work introduces an explicit safety classification task using a [CLS] token, combined with strategic attention and decoding strategies. This design enables more robust safety alignment by reinforcing clear decision boundaries and re-evaluating safety dynamically throughout generation, ensuring better defense against a wide range of adversarial attacks.
+            Backdoor attacks are a stealthy and hard-to-detect threat to instruction-tuned LLMs: models behave normally on benign inputs but produce malicious outputs when hidden triggers appear. Existing defenses either try to detect poisoned samples or directly modify model parameters, but most assume prior knowledge of triggers, access to a clean reference model, or rely on fragile internal signals (e.g., attention patterns). These assumptions are often unrealistic in real deployments, and prior insights from classification models (e.g., attention- or early-layer localization) do not transfer well to instruction-tuned generative LLMs, whose backdoor behaviors are distributed and harder to isolate.
           </p>
         </div>
       </div>
